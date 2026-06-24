@@ -1,0 +1,240 @@
+/* ============================================
+   SMS Spam Detection — Custom Styles
+   Claude AI-inspired minimalist design
+   ============================================ */
+
+/* ----- Base ----- */
+body {
+    background-color: #FAF9F7;
+    color: #1A1A1A;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme="dark"] body,
+.dark body {
+    background-color: #1A1A1A;
+    color: #E8E5E0;
+}
+
+/* ----- Selection ----- */
+::selection {
+    background-color: rgba(201, 100, 66, 0.15);
+    color: inherit;
+}
+
+/* ----- Scrollbar ----- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(107, 101, 96, 0.25);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 101, 96, 0.4);
+}
+
+/* ----- Textarea ----- */
+textarea {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(107, 101, 96, 0.25) transparent;
+}
+
+textarea::placeholder {
+    transition: opacity 0.3s ease;
+}
+
+textarea:focus::placeholder {
+    opacity: 0.3;
+}
+
+/* ----- Composer Card Focus ----- */
+.composer-card:has(textarea:focus) {
+    border-color: rgba(201, 100, 66, 0.3);
+    box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.06);
+}
+
+.dark .composer-card:has(textarea:focus) {
+    border-color: rgba(201, 100, 66, 0.4);
+    box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.08);
+}
+
+/* ----- Animations ----- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseSlow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes dotBounce {
+    0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out both;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out both;
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+}
+
+/* Loading dots animation */
+.loading-dots span:nth-child(1) {
+    animation: dotBounce 1.4s infinite ease-in-out both;
+    animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+    animation: dotBounce 1.4s infinite ease-in-out both;
+    animation-delay: 0.16s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation: dotBounce 1.4s infinite ease-in-out both;
+    animation-delay: 0.32s;
+}
+
+/* ----- Confidence Bar Animation ----- */
+.confidence-bar-animated {
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ----- Method Cards ----- */
+.method-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.dark .method-card:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- Result State Transitions ----- */
+#result-card,
+#loading-state,
+#error-state {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#result-card.hidden,
+#loading-state.hidden,
+#error-state.hidden {
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+}
+
+/* ----- Staggered Animations ----- */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+
+/* ----- Responsive Adjustments ----- */
+@media (max-width: 640px) {
+    .composer-card {
+        border-radius: 16px;
+    }
+
+    .composer-card textarea {
+        border-radius: 12px;
+        min-height: 100px;
+        padding: 1rem;
+        padding-bottom: 3.5rem;
+        font-size: 0.9375rem;
+    }
+}
+
+/* ----- Print Styles ----- */
+@media print {
+    header,
+    #theme-toggle,
+    .composer-card,
+    #empty-state,
+    #loading-state {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* ----- Focus Visible ----- */
+button:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid rgba(201, 100, 66, 0.5);
+    outline-offset: 2px;
+}
+
+/* ----- Theme transition ----- */
+*,
+*::before,
+*::after {
+    transition-property: background-color, border-color, color;
+    transition-timing-function: ease;
+    transition-duration: 0ms;
+}
+
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+    transition-duration: 500ms !important;
+}

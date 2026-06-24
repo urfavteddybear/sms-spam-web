@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content-Based SMS Spam Detection — TF-IDF, Lexicon-Based Feature & Naive Bayes</title>
-    <meta name="description" content="Deteksi SMS Spam menggunakan kombinasi TF-IDF, Lexicon-Based Feature, dan Naive Bayes. Proyek penelitian Universitas INSTIKI.">
+    <meta name="description" content="Deteksi SMS Spam menggunakan kombinasi TF-IDF, Lexicon-Based Feature, dan Naive Bayes.">
     <meta name="keywords" content="SMS Spam Detection, TF-IDF, Naive Bayes, Lexicon-Based, Machine Learning, NLP">
-    <meta name="author" content="Universitas INSTIKI">
+    <!-- <meta name="author" content="-"> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

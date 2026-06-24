@@ -87,7 +87,7 @@
         <div class="max-w-3xl mx-auto px-6 py-3 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-full bg-accent-primary animate-pulse-slow"></div>
-                <span class="text-xs font-medium tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">Research Tool</span>
+                <span class="text-xs font-medium tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">Content-Based SMS Spam Detection</span>
             </div>
             <button id="theme-toggle" 
                     class="group relative w-10 h-10 rounded-full flex items-center justify-center border border-border-light dark:border-border-dark hover:bg-card-light dark:hover:bg-card-dark transition-all duration-300"

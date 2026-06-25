@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content-Based SMS Spam Detection — TF-IDF, Lexicon-Based Feature & Naive Bayes</title>
-    <meta name="description" content="Deteksi SMS Spam menggunakan kombinasi TF-IDF, Lexicon-Based Feature, dan Naive Bayes.">
+    <meta name="description" content="Deteksi SMS Spam menggunakan kombinasi Lexicon-Based Feature dan Naive Bayes.">
     <meta name="keywords" content="SMS Spam Detection, TF-IDF, Naive Bayes, Lexicon-Based, Machine Learning, NLP">
     <!-- <meta name="author" content="-"> -->
 
@@ -115,8 +115,7 @@
                     Content-Based SMS<br class="hidden sm:block"> Spam Detection
                 </h1>
                 <p class="text-base md:text-lg text-text-secondary-light dark:text-text-secondary-dark leading-relaxed max-w-xl mx-auto">
-                    Deteksi SMS Spam menggunakan kombinasi <span class="text-text-primary-light dark:text-text-primary-dark font-medium">TF-IDF</span>,
-                    <span class="text-text-primary-light dark:text-text-primary-dark font-medium">Lexicon-Based Feature</span>, dan
+                    Deteksi SMS Spam menggunakan <span class="text-text-primary-light dark:text-text-primary-dark font-medium">Lexicon-Based Feature</span> dan
                     <span class="text-text-primary-light dark:text-text-primary-dark font-medium">Naive Bayes</span>
                 </p>
             </div>
@@ -259,7 +258,7 @@
 
         <!-- Methods Section -->
         <section class="max-w-3xl mx-auto px-6 py-16 border-t border-border-light dark:border-border-dark mt-8 transition-colors duration-500">
-            <h2 class="font-serif text-2xl md:text-3xl text-center text-text-primary-light dark:text-text-primary-dark mb-10">Metode yang Digunakan</h2>
+            <h2 class="font-serif text-2xl md:text-3xl text-center text-text-primary-light dark:text-text-primary-dark mb-10">Data Pipeline</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <!-- TF-IDF -->
@@ -304,7 +303,7 @@
         <div class="max-w-3xl mx-auto px-6 py-12 text-center">
             <h2 class="font-serif text-lg text-text-primary-light dark:text-text-primary-dark mb-2">Content-Based SMS Spam Detection</h2>
             <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4 leading-relaxed">
-                Menggunakan kombinasi TF-IDF, Lexicon-Based Feature, dan Naive Bayes
+                Menggunakan kombinasi Lexicon-Based Feature dan Naive Bayes
             </p>
         </div>
     </footer>
